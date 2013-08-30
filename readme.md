@@ -37,3 +37,36 @@ Once you have added your configuration, add the service provider. Open `app/conf
 
 The final step is to change your auth driver.  Open `app/config/auth.php`, and change the driver to `stormpath`
 
+
+
+## Usage
+
+This driver replacement has been created to make it easy to replace the current auth.  All the commands are the same and are used just like the current way.
+
+### Examples
+
+    Route::get('attempt', function() {
+		$user = Auth::attempt(array('username' => 'test', 'password' => '1234Abcd'));
+	});
+
+	Route::get('check',function() {
+		Auth::check();
+	});
+
+	Route::get('loginUsingId',function() {
+		$user = 'xXxXxXxX'; // the id from stormpath for the user
+		Auth::loginUsingId($user);
+	});
+
+	Route::get('once', function() {
+		Auth::once(array('username' => 'test', 'password' => '1234Abcd'));
+	});
+
+	Route::get('login', function() {
+		$user = new \Lamarus\Stormpath\StormpathUser('https://api.stormpath.com/v1/accounts/xXxXxXxX');
+		Auth::login($user);
+	});
+
+	Route::get('logout', function() {
+		Auth::logout();
+	});
