@@ -1,0 +1,29 @@
+{
+    "name": "lamarus/stormpath",
+    "description": "",
+    "authors": [
+        {
+            "name": "Brian Retterer",
+            "email": "bretterer@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x",
+        "guzzle/guzzle": "3.7.*@dev"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan config:publish lamarus/stormpath"
+        ]
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Lamarus\\Stormpath": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
