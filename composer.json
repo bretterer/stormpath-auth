@@ -1,6 +1,6 @@
 {
     "name": "lamarus/stormpath",
-    "description": "",
+    "description": "A drop in replacement for Laravel 4 Auth Driver.",
     "authors": [
         {
             "name": "Brian Retterer",
@@ -11,11 +11,6 @@
         "php": ">=5.3.0",
         "illuminate/support": "4.0.x",
         "guzzle/guzzle": "3.7.*@dev"
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "php artisan config:publish lamarus/stormpath"
-        ]
     },
     "autoload": {
         "classmap": [
