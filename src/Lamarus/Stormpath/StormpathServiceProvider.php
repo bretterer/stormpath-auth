@@ -23,7 +23,7 @@ class StormpathServiceProvider extends ServiceProvider {
 		
 		\Auth::extend('stormpath', function() {
 		   
-		    return new Guard(new Providers\StormpathUserProvider, \App::make('session'));
+		    return new Guard(new Providers\StormpathUserProvider, \App::make('session.store'));
 		});
 	}
 
