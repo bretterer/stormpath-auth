@@ -1,7 +1,7 @@
 # Stormpath drop in replacement for Laravel 4 Auth
 
 This is a provider for adding a stormpath driver to your auth system for laravel 4.  
-
+[![endorse](https://api.coderwall.com/bretterer/endorsecount.png)](https://coderwall.com/bretterer)
 
 
 ## What is Stormpath?
